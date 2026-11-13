@@ -1,0 +1,11 @@
+[
+    {
+        "id": "trx-5c4df8119f",
+        "member_id": "usr-44dc69b477",
+        "book_id": "bk-67c8af35",
+        "borrowed_at": "2026-11-13",
+        "due_at": "2026-11-27",
+        "returned_at": "2026-11-13",
+        "status": "Dikembalikan"
+    }
+]

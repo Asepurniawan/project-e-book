@@ -1,0 +1,42 @@
+[
+    {
+        "id": "bk-001",
+        "title": "The Creative Act",
+        "author": "Rick Rubin",
+        "category": "Bisnis",
+        "stock": 2,
+        "description": "Panduan kreatif untuk menemukan ide dan mengubahnya menjadi karya."
+    },
+    {
+        "id": "bk-002",
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "category": "Pengembangan Diri",
+        "stock": 3,
+        "description": "Strategi praktis membangun kebiasaan baik secara konsisten."
+    },
+    {
+        "id": "bk-003",
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "category": "Teknologi",
+        "stock": 1,
+        "description": "Prinsip menulis kode yang bersih, mudah dipahami, dan dirawat."
+    },
+    {
+        "id": "bk-004",
+        "title": "The Design of Everyday Things",
+        "author": "Don Norman",
+        "category": "Desain",
+        "stock": 2,
+        "description": "Pengantar human-centered design dan pengalaman pengguna."
+    },
+    {
+        "id": "bk-67c8af35",
+        "title": "petualangan seru",
+        "author": "asep kurniawan",
+        "category": "novel",
+        "stock": 1000,
+        "description": ""
+    }
+]

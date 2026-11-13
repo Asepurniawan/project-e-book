@@ -1,0 +1,8 @@
+<?php
+declare(strict_types=1);
+require_once dirname(__DIR__) . '/config/config.php';
+use App\Core\JsonDatabase; use App\Services\AuthService; use App\Services\LibraryService;
+$user = AuthService::requireRole('member'); $db = new JsonDatabase(STORAGE_PATH); $books = []; foreach ((new LibraryService($db))->books() as $book) $books[$book->getId()] = $book; $rows = array_filter($db->all('transactions'), static fn (array $row): bool => ($row['member_id'] ?? '') === $user->getId()); $title = 'Riwayat Peminjaman'; $assetPrefix = '../'; require dirname(__DIR__) . '/partials/header.php';
+?>
+<div class="layout"><aside class="sidebar"><h2>Member Area</h2><nav><a href="dashboard.php">Dashboard</a><a href="catalog.php">Katalog</a><a href="my-books.php">Buku Saya</a><a class="active" href="history.php">Riwayat</a></nav></aside><main class="main"><div class="main-header"><h1>Riwayat Peminjaman</h1></div><div class="table-wrap"><table class="table"><thead><tr><th>Buku</th><th>Pinjam</th><th>Kembali</th><th>Status</th></tr></thead><tbody><?php foreach ($rows as $row): ?><tr><td><?= e($books[$row['book_id']]->getTitle() ?? 'Buku') ?></td><td><?= e((string) $row['borrowed_at']) ?></td><td><?= e((string) ($row['returned_at'] ?? '-')) ?></td><td><span class="badge <?= ($row['status'] ?? '') === 'Dikembalikan' ? 'success' : '' ?>"><?= e((string) $row['status']) ?></span></td></tr><?php endforeach; ?><?php if (!$rows): ?><tr><td colspan="4" class="empty">Belum ada riwayat peminjaman.</td></tr><?php endif; ?></tbody></table></div></main></div>
+<?php $assetPrefix = '../'; require dirname(__DIR__) . '/partials/footer.php'; ?>

@@ -1,0 +1,6 @@
+[
+  {"id":"bk-001","title":"The Creative Act","author":"Rick Rubin","category":"Bisnis","pages":432,"coverClass":"cover-orange"},
+  {"id":"bk-002","title":"Atomic Habits","author":"James Clear","category":"Bisnis","pages":320,"coverClass":"cover-yellow"},
+  {"id":"bk-003","title":"Clean Code","author":"Robert C. Martin","category":"Teknologi","pages":464,"coverClass":"cover-dark"},
+  {"id":"bk-004","title":"The Design of Everyday Things","author":"Don Norman","category":"Desain","pages":368,"coverClass":"cover-blue"}
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "id": "usr-admin",
+        "name": "Administrator UMM",
+        "email": "admin@umm.ac.id",
+        "password": "$2y$10$fr9T1sY7S\/ri0xi7616Wn.Opu4acPX36mw\/2dxHZQTkEKnAsRJuD6",
+        "role": "admin"
+    },
+    {
+        "id": "usr-44dc69b477",
+        "name": "asep",
+        "email": "asep@umm.ac.id",
+        "password": "$2y$10$77wp0W4LCK2ORrOlgxS6C.EIAP3za12WYnQwFoa8phINF8ln5forO",
+        "role": "member"
+    }
+]

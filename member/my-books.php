@@ -1,0 +1,10 @@
+<?php
+declare(strict_types=1);
+require_once dirname(__DIR__) . '/config/config.php';
+use App\Core\JsonDatabase; use App\Services\AuthService; use App\Services\LibraryService;
+$user = AuthService::requireRole('member'); $db = new JsonDatabase(STORAGE_PATH); $service = new LibraryService($db); $message = null; $error = null;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { try { $service->returnBook($user->getId(), (string) ($_POST['transaction_id'] ?? '')); $message = 'Buku berhasil dikembalikan.'; } catch (Throwable $exception) { $error = $exception->getMessage(); } }
+$books = []; foreach ($service->books() as $book) $books[$book->getId()] = $book; $rows = array_filter($db->all('transactions'), static fn (array $row): bool => ($row['member_id'] ?? '') === $user->getId() && ($row['status'] ?? '') === 'Dipinjam'); $title = 'Buku Saya'; $assetPrefix = '../'; require dirname(__DIR__) . '/partials/header.php';
+?>
+<div class="layout"><aside class="sidebar"><h2>Member Area</h2><nav><a href="dashboard.php">Dashboard</a><a href="catalog.php">Katalog</a><a class="active" href="my-books.php">Buku Saya</a><a href="history.php">Riwayat</a></nav></aside><main class="main"><div class="main-header"><h1>Buku yang Dipinjam</h1></div><?php if ($message): ?><div class="notice"><?= e($message) ?></div><?php endif; ?><?php if ($error): ?><div class="alert"><?= e($error) ?></div><?php endif; ?><div class="table-wrap"><table class="table"><thead><tr><th>Buku</th><th>Tanggal pinjam</th><th>Jatuh tempo</th><th>Aksi</th></tr></thead><tbody><?php foreach ($rows as $row): ?><tr><td><?= e($books[$row['book_id']]->getTitle() ?? 'Buku') ?></td><td><?= e((string) $row['borrowed_at']) ?></td><td><?= e((string) $row['due_at']) ?></td><td><form method="post"><input type="hidden" name="transaction_id" value="<?= e((string) $row['id']) ?>"><button class="btn btn-light" type="submit">Kembalikan</button></form></td></tr><?php endforeach; ?><?php if (!$rows): ?><tr><td colspan="4" class="empty">Belum ada buku yang sedang dipinjam.</td></tr><?php endif; ?></tbody></table></div></main></div>
+<?php $assetPrefix = '../'; require dirname(__DIR__) . '/partials/footer.php'; ?>
