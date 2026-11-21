@@ -7,5 +7,95 @@
         "due_at": "2026-11-27",
         "returned_at": "2026-11-13",
         "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-9f8b4c9770",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-001",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-be066dcde0",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-001",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-87c7f8dd91",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-002",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-22bbdc0602",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-002",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-97091759bf",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-002",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-19427ff83a",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-003",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-3ffeee8dc4",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-004",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-2d14116d77",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-004",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-7fc23e1fca",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-67c8af35",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
+    },
+    {
+        "id": "trx-af5ebff3c7",
+        "member_id": "usr-ab8f70b131",
+        "book_id": "bk-67c8af35",
+        "borrowed_at": "2026-11-21",
+        "due_at": "2026-12-05",
+        "returned_at": "2026-11-21",
+        "status": "Dikembalikan"
     }
 ]

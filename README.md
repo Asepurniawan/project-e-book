@@ -1,4 +1,4 @@
-# E-Library UMM
+# E-Library
 
 Aplikasi UTS Pemrograman Web untuk katalog e-book, autentikasi pengguna, dashboard admin/member, dan simulasi peminjaman serta pengembalian.
 

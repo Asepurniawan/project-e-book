@@ -12,5 +12,12 @@
         "email": "asep@umm.ac.id",
         "password": "$2y$10$77wp0W4LCK2ORrOlgxS6C.EIAP3za12WYnQwFoa8phINF8ln5forO",
         "role": "member"
+    },
+    {
+        "id": "usr-ab8f70b131",
+        "name": "Asep Kurniawan",
+        "email": "asepkurniawan5288@gmail.com",
+        "password": "$2y$10$Te9MC862ce\/ySdLGxZv5S.0aNNv7IpzGmMIjOv\/iB2BCfKTcGU8ni",
+        "role": "member"
     }
 ]
